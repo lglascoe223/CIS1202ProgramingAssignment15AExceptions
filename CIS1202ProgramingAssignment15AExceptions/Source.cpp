@@ -15,7 +15,7 @@ int main() {
 	char result;
 	try {
 
-		result = character ("a", -1);
+		result = character ('a', 1);
 		cout << result << endl;
 	}
 	catch (string exception) {
