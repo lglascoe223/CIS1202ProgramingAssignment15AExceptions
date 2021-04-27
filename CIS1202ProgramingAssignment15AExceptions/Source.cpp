@@ -12,11 +12,11 @@ using namespace std;
 char character(char start, int offset);
 
 int main() {
-	char result;
+	char ch;
 	try {
 
-		result = character ('a', 1);
-		cout << result << endl;
+		ch = character ('Z', -3);
+		cout << ch<< endl;
 	}
 	catch (string exception) {
 		cout << exception << endl;
@@ -29,21 +29,24 @@ int main() {
 char character(char start, int offset) {
     
 		
-	if (start < 'A' || (start > 'Z') && (start < 'a') || start >'z')
+	if (start < 'A' || (start > 'Z') && (start < 'a') || start > 'z')
 	{
 		string exception = "Error! Invalid Character Exception";
 			throw exception;
 	}
 	char result = start + offset;
+
 	if (result < 'A' || (result > 'Z') && (result < 'a') || result > 'z')
 	{
 
 		string exception = "Error! Invalid Range Exception";
 			throw exception;
 	}
-	if (!((isupper(start) == 0 )|| islower(result == 0))) {
+
+	if (!((isupper(start) == 0 ) || (islower(result )== 0)))
+	{
 		
-		string exception ="Error! No upper to lower transitions allowed";
+		string exception = "Error! No upper to lower transitions allowed";
 			throw exception;
 	}
 	return result;
