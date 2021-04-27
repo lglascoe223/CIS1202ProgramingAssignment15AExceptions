@@ -19,6 +19,21 @@ int main() {
 }
 
 char character(char start, int offset) {
+     char result = start + offset;
+		
+	if (start < 'A' || (start > 'Z') && (start < 'a') || start >'z')
+	{
+		string exception = "Error! Invalid Character Exception";
+			throw exception;
+	}
+	if (result < 'A' || (result > 'Z') && (result < 'a' || (result > 'z')) {
 
-
+		string exception = "Error! Invalid Range Exception";
+			throw exception;
+	}
+	if (!(isupper(start) == 0 || islower(result == 0))) {
+		string exception ="Error! No upper to lower transitions allowed";
+			throw exception;
+	}
 }
+
